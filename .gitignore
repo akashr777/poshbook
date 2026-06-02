@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+lib/
+
+# Firebase functions (too large, will be deployed separately)
+functions/
+functions_backup/
+
+# Bun lock file
+bun.lock
+
+# Vercel
+.vercel/
+
+# Firebase
+.firebase/
+
+# Backup folders
+src_backup/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

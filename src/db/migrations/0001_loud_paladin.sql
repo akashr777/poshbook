@@ -1,0 +1,1 @@
+CREATE TYPE "public"."vehicle_sale_payment_status" AS ENUM('PENDING', 'PARTIAL', 'PAID');

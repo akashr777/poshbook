@@ -1,0 +1,11 @@
+﻿{
+  "name": "poshbook-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.4.0",
+    "@hono/node-server": "^2.0.4"
+  }
+}
