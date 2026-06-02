@@ -1,5 +1,6 @@
 ﻿import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { serve } from '@hono/node-server';
 
 const app = new Hono();
 
@@ -41,9 +42,18 @@ app.post('/api/auth/login', async (c) => {
 });
 
 app.notFound((c) => c.json({ error: 'Route not found' }, 404));
-app.onError((err, c) => { 
-  console.error(err.message); 
-  return c.json({ error: 'Internal server error' }, 500); 
+
+app.onError((err, c) => {
+  console.error(err.message);
+  return c.json({ error: 'Internal server error' }, 500);
 });
 
-export default app;
+// Start the server
+const port = process.env.PORT || 3000;
+
+serve({
+  fetch: app.fetch,
+  port
+}, (info) => {
+  console.log(`✅ Server is running on port ${info.port}`);
+});
