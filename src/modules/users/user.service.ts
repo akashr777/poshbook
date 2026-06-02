@@ -3,7 +3,7 @@ import type { PublicUser, UserCreateInput, UserUpdateInput, UsersQueryInput } fr
 import { toPublicUser } from './user.types';
 import { authService } from '../auth';
 import { emailService } from '../../services/emailService';
-import { passwordService } from 'src/services/passwordService';  // ← ADD THIS LINE
+import { passwordService } from '../../services/passwordService.js';  // ← FIXED
 
 export const userService = {
   async findById(id: number): Promise<PublicUser | null> {

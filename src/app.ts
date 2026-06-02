@@ -50,9 +50,10 @@ app.use(
   })
 );
 
-// Explicit OPTIONS handler for preflight requests
+// Explicit OPTIONS handler for preflight requests - FIXED
 app.options('*', (c) => {
-  return c.text('', 204);
+  c.status(204);
+  return c.text('');
 });
 
 /* ================= REQUEST LOGGER ================= */
