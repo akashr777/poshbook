@@ -2,27 +2,26 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { secureHeaders } from 'hono/secure-headers';
 
-import { env } from './config/env';
-import { logger } from './utils/logger';
-import { errorHandler } from './middlewares/errorHandler';
+import { env } from './config/env.js';
+import { logger } from './utils/logger.js';
+import { errorHandler } from './middlewares/errorHandler.js';
 
-import { authRouter } from './routes/auth';
-import { usersRouter } from './modules/users';
-import { healthRouter } from './routes/health';
-import { vehiclesRouter } from './modules/vehicles';
-import { daybookRouter } from './modules/daybook';
-import { vendorsRouter } from './modules/vendors';
-import { fundersRouter } from './modules/funders';
-import { vendorLedgerRouter } from './modules/vendor-ledger';
-import { expensesRouter } from './modules/expenses';
-import { salariesRouter } from './modules/salaries';
-import { vehicleAccountingRouter } from './modules/vehicle-accounting';
-import { vehicleExchangeRouter } from './modules/vehicle-exchange';
-import { paymentsRouter } from './modules/payments';
-import { dashboardRouter } from './modules/dashboard';
-import { reportsRouter } from './modules/reports';
-import type { AppVariables } from './types/app';
-
+import { authRouter } from './routes/auth.js';
+import { usersRouter } from './modules/users/index.js';
+import { healthRouter } from './routes/health.js';
+import { vehiclesRouter } from './modules/vehicles/index.js';
+import { daybookRouter } from './modules/daybook/index.js';
+import { vendorsRouter } from './modules/vendors/index.js';
+import { fundersRouter } from './modules/funders/index.js';
+import { vendorLedgerRouter } from './modules/vendor-ledger/index.js';
+import { expensesRouter } from './modules/expenses/index.js';
+import { salariesRouter } from './modules/salaries/index.js';
+import { vehicleAccountingRouter } from './modules/vehicle-accounting/index.js';
+import { vehicleExchangeRouter } from './modules/vehicle-exchange/index.js';
+import { paymentsRouter } from './modules/payments/index.js';
+import { dashboardRouter } from './modules/dashboard/index.js';
+import { reportsRouter } from './modules/reports/index.js';
+import type { AppVariables } from './types/app.js';
 export const app = new Hono<{ Variables: AppVariables }>();
 
 /* ================= TRUST / SECURITY HEADERS ================= */
