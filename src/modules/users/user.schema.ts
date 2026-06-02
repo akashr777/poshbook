@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
 import { USER_ROLES }
-from '../../constants/roles.constants';
+from '../../constants/roles.constants.js';
 
 import { USER_STATUS }
-from '../../constants/user-status.constants';
+from '../../constants/user-status.constants.js';
 
 // ======================================================
 // CREATE USER SCHEMA

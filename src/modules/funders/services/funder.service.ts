@@ -1,13 +1,13 @@
-import { db } from '../../../db';
-import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository';
-import { funderRepository } from '../repositories/funder.repository';
+import { db } from '../../../db/index.js';
+import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository.js';
+import { funderRepository } from '../repositories/funder.repository.js';
 import type {
   CreateFunderDto,
   CreateFunderTransactionDto,
   LedgerQueryDto,
   ListFundersQueryDto,
   UpdateFunderDto,
-} from '../dto/funder.dto';
+} from '../dto/funder.dto.js';
 
 export const funderService = {
   async list(query: ListFundersQueryDto) {

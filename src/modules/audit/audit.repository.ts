@@ -1,6 +1,6 @@
-import { db } from '../../db';
-import { auditLogs } from '../../db/schema';
-import { logger } from '../../utils/logger';
+import { db } from '../../db/index.js';
+import { auditLogs } from '../../db/schema.js';
+import { logger } from '../../utils/logger.js';
 
 export type AuditRepositoryInput = {
   action: string;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { passwordSchema } from './password';
+import { passwordSchema } from './password.js';
 
 export const loginSchema = z.object({
   email: z.string().email(),

@@ -1,11 +1,11 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { expenseController } from '../controllers/expense.controller';
-import { createExpenseCategorySchema, createExpenseSchema, expenseReportQuerySchema } from '../validators/expense.validation';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { expenseController } from '../controllers/expense.controller.js';
+import { createExpenseCategorySchema, createExpenseSchema, expenseReportQuerySchema } from '../validators/expense.validation.js';
 
 export const expensesRouter = new Hono<{ Variables: AppVariables }>();
 

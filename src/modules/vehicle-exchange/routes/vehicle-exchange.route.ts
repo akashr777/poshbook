@@ -1,11 +1,11 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { vehicleExchangeController } from '../controllers/vehicle-exchange.controller';
-import { createVehicleExchangeSchema, exchangeReportQuerySchema } from '../validators/vehicle-exchange.validation';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { vehicleExchangeController } from '../controllers/vehicle-exchange.controller.js';
+import { createVehicleExchangeSchema, exchangeReportQuerySchema } from '../validators/vehicle-exchange.validation.js';
 
 export const vehicleExchangeRouter = new Hono<{ Variables: AppVariables }>();
 

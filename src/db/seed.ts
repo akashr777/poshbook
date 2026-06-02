@@ -1,9 +1,9 @@
 import { eq } from 'drizzle-orm';
-import { db } from './index';
-import { users } from './schema';
-import { env } from '../config/env';
-import { passwordService } from '../services/passwordService';
-import { passwordSchema } from '../validators/password';
+import { db } from './index.js';
+import { users } from './schema.js';
+import { env } from '../config/env.js';
+import { passwordService } from '../services/passwordService.js';
+import { passwordSchema } from '../validators/password.js';
 
 async function seed() {
   const passwordCheck = passwordSchema.safeParse(env.SEED_ADMIN_PASSWORD);

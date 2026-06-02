@@ -1,7 +1,7 @@
 import { and, desc, gte, lte, sql } from 'drizzle-orm';
-import { db } from '../../../db';
-import { salaryExpenses } from '../schemas/salary.schema';
-import type { CreateSalaryExpenseDto, SalaryReportQueryDto } from '../dto/salary.dto';
+import { db } from '../../../db/index.js';
+import { salaryExpenses } from '../schemas/salary.schema.js';
+import type { CreateSalaryExpenseDto, SalaryReportQueryDto } from '../dto/salary.dto.js';
 
 type DbClient = typeof db;
 

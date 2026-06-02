@@ -1,6 +1,6 @@
 import { and, eq, isNull, gt } from 'drizzle-orm';
-import { db } from '../../db';
-import { refreshSessions } from '../../db/schema';
+import { db } from '../../db/index.js';
+import { refreshSessions } from '../../db/schema.js';
 
 export const sessionRepository = {
   async insert(jti: string, userId: number, expiresAt: Date): Promise<void> {

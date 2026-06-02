@@ -1,8 +1,8 @@
-import { userRepository } from './user.repository';
-import type { PublicUser, UserCreateInput, UserUpdateInput, UsersQueryInput } from './user.types';
-import { toPublicUser } from './user.types';
-import { authService } from '../auth';
-import { emailService } from '../../services/emailService';
+import { userRepository } from './user.repository.js';
+import type { PublicUser, UserCreateInput, UserUpdateInput, UsersQueryInput } from './user.types.js';
+import { toPublicUser } from './user.types.js';
+import { authService } from '../auth/index.js';
+import { emailService } from '../../services/emailService.js';
 import { passwordService } from '../../services/passwordService.js';  // ← FIXED
 
 export const userService = {

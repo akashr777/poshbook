@@ -1,2 +1,2 @@
-export * from './routes/report.route';
-export * from './services/report.service';
+export * from './routes/report.route.js';
+export * from './services/report.service.js';

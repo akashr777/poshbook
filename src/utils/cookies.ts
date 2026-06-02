@@ -1,6 +1,6 @@
 import type { Context } from 'hono';
 import { setCookie, getCookie, deleteCookie } from 'hono/cookie';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 const baseCookieOptions = () => ({
   httpOnly: true,

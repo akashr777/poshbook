@@ -1,5 +1,5 @@
-import { cashLedgerRepository } from './cash-ledger.repository';
-import type { CashLedgerCreateInput, CashLedgerReportQuery } from './cash-ledger.types';
+import { cashLedgerRepository } from './cash-ledger.repository.js';
+import type { CashLedgerCreateInput, CashLedgerReportQuery } from './cash-ledger.types.js';
 
 export const cashLedgerService = {
   create(input: CashLedgerCreateInput, client?: any) {

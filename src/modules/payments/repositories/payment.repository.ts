@@ -1,5 +1,5 @@
-import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository';
-import type { CreatePaymentDto } from '../dto/payment.dto';
+import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository.js';
+import type { CreatePaymentDto } from '../dto/payment.dto.js';
 
 export const paymentRepository = {
   create(input: CreatePaymentDto, createdBy: number) {

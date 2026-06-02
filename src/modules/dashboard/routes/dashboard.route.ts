@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { dashboardController } from '../controllers/dashboard.controller';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { dashboardController } from '../controllers/dashboard.controller.js';
 
 export const dashboardRouter = new Hono<{ Variables: AppVariables }>();
 

@@ -1,7 +1,7 @@
 import { and, asc, count, desc, eq, ilike, or } from 'drizzle-orm';
-import { db } from '../../db';
-import { vendors, type VendorRow } from './vendor.schema';
-import type { VendorsQueryInput, VendorStatus, VendorUpdateInput, VendorCreateInput } from './vendor.types';
+import { db } from '../../db/index.js';
+import { vendors, type VendorRow } from './vendor.schema.js';
+import type { VendorsQueryInput, VendorStatus, VendorUpdateInput, VendorCreateInput } from './vendor.types.js';
 
 export const vendorRepository = {
   async findById(id: number): Promise<VendorRow | null> {

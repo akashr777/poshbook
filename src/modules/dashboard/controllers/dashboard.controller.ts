@@ -1,7 +1,7 @@
 import type { Context } from 'hono';
-import { ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { dashboardService } from '../services/dashboard.service';
+import { ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { dashboardService } from '../services/dashboard.service.js';
 
 type DashboardContext = Context<{ Variables: AppVariables }>;
 

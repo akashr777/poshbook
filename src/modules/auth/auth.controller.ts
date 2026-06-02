@@ -1,18 +1,18 @@
 import type { Context } from 'hono';
-import { authService } from './auth.service';
-import { userService, toPublicUser } from '../users';
-import { fail, ok } from '../../utils/responses';
-import { setRefreshCookie, clearRefreshCookie, getRefreshTokenFromCookie } from '../../utils/cookies';
-import { auditFromContext } from '../audit';
-import { getClientKey } from '../../utils/request';
-import { recordFailedLogin, clearFailedLogin } from './auth.middleware';
-import type { AppVariables } from '../../types/app';
+import { authService } from './auth.service.js';
+import { userService, toPublicUser } from '../users/index.js';
+import { fail, ok } from '../../utils/responses.js';
+import { setRefreshCookie, clearRefreshCookie, getRefreshTokenFromCookie } from '../../utils/cookies.js';
+import { auditFromContext } from '../audit/index.js';
+import { getClientKey } from '../../utils/request.js';
+import { recordFailedLogin, clearFailedLogin } from './auth.middleware.js';
+import type { AppVariables } from '../../types/app.js';
 import type {
   changePasswordSchema,
   forgotPasswordSchema,
   loginSchema,
   resetPasswordSchema
-} from './auth.schema';
+} from './auth.schema.js';
 import type { z } from 'zod';
 
 type LoginInput = z.infer<typeof loginSchema>;

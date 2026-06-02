@@ -1,8 +1,8 @@
 import { createMiddleware } from 'hono/factory';
-import { env } from '../../config/env';
-import { fail } from '../../utils/responses';
-import { getClientKey } from '../../utils/request';
-import { authRateLimit, loginRateLimit } from '../../middlewares/rateLimit';
+import { env } from '../../config/env.js';
+import { fail } from '../../utils/responses.js';
+import { getClientKey } from '../../utils/request.js';
+import { authRateLimit, loginRateLimit } from '../../middlewares/rateLimit.js';
 
 type AttemptState = {
   failures: number;

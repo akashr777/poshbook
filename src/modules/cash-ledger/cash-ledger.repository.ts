@@ -1,7 +1,7 @@
 import { and, desc, eq, gte, lte, sql } from 'drizzle-orm';
-import { db } from '../../db';
-import { cashLedger } from './cash-ledger.schema';
-import type { CashLedgerCreateInput, CashLedgerReportQuery } from './cash-ledger.types';
+import { db } from '../../db/index.js';
+import { cashLedger } from './cash-ledger.schema.js';
+import type { CashLedgerCreateInput, CashLedgerReportQuery } from './cash-ledger.types.js';
 
 type DbClient = typeof db;
 

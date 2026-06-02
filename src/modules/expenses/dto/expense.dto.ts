@@ -3,7 +3,7 @@ import type {
   createExpenseCategorySchema,
   createExpenseSchema,
   expenseReportQuerySchema,
-} from '../validators/expense.validation';
+} from '../validators/expense.validation.js';
 
 export type CreateExpenseCategoryDto = z.infer<typeof createExpenseCategorySchema>;
 export type CreateExpenseDto = z.infer<typeof createExpenseSchema>;

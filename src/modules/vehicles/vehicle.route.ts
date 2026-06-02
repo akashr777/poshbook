@@ -1,28 +1,28 @@
 import { Hono } from 'hono';
 
-import { jwtAuth } from '../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../middlewares/auth/requirePermission';
+import { jwtAuth } from '../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../middlewares/auth/requirePermission.js';
 
-import { Permission } from '../../utils/permissions';
+import { Permission } from '../../utils/permissions.js';
 
-import { vehicleController } from './vehicle.controller';
+import { vehicleController } from './vehicle.controller.js';
 
 import {
   createVehicleSchema,
   listVehiclesQuerySchema,
   updateVehicleSchema,
   vehicleIdParamSchema
-} from './vehicle.validation';
+} from './vehicle.validation.js';
 
 import {
   validateParams,
   validateRequest
-} from '../../middlewares/validateRequest';
+} from '../../middlewares/validateRequest.js';
 
-import type { AppVariables } from '../../types/app';
+import type { AppVariables } from '../../types/app.js';
 
 // ✅ ONLY DAYBOOK ROUTES NOW
-import { daybookRouter } from '../daybook/daybook.route';
+import { daybookRouter } from '../daybook/daybook.route.js';
 
 export const vehiclesRouter =
   new Hono<{ Variables: AppVariables }>();

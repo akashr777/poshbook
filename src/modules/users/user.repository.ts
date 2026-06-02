@@ -1,7 +1,7 @@
 import { asc, count, desc, eq, ilike, or } from 'drizzle-orm';
-import { db } from '../../db';
-import { users, type UserRow } from '../../db/schema';
-import type { UserRole, UserStatus } from '../../types/app';
+import { db } from '../../db/index.js';
+import { users, type UserRow } from '../../db/schema.js';
+import type { UserRole, UserStatus } from '../../types/app.js';
 
 export type UserRepositoryListInput = {
   page: number;

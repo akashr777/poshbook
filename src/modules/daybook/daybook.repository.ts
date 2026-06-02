@@ -1,7 +1,7 @@
 import { and, asc, count, desc, eq, gte, ilike, lte, or, sql } from 'drizzle-orm';
-import { db } from '../../db';
-import { vehicles } from '../vehicles/vehicle.schema';
-import { daybookEntries } from './daybook.schema';
+import { db } from '../../db/index.js';
+import { vehicles } from '../vehicles/vehicle.schema.js';
+import { daybookEntries } from './daybook.schema.js';
 import type {
   CreateDaybookEntryInput,
   DaybookEntryRecord,
@@ -10,7 +10,7 @@ import type {
   ReportQuery,
   UpdateDaybookEntryInput,
   VehicleFinancialSummary,
-} from './daybook.types';
+} from './daybook.types.js';
 
 type DbClient = typeof db;
 

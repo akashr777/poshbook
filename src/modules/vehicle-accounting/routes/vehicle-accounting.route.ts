@@ -1,11 +1,11 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateParams, validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { vehicleAccountingController } from '../controllers/vehicle-accounting.controller';
-import { createVehicleSaleSchema, vehicleAccountingVehicleParamSchema } from '../validators/vehicle-accounting.validation';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateParams, validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { vehicleAccountingController } from '../controllers/vehicle-accounting.controller.js';
+import { createVehicleSaleSchema, vehicleAccountingVehicleParamSchema } from '../validators/vehicle-accounting.validation.js';
 
 export const vehicleAccountingRouter = new Hono<{ Variables: AppVariables }>();
 

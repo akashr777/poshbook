@@ -1,17 +1,17 @@
 import { Hono } from 'hono';
 
-import { authRateLimit, loginRateLimit } from '../middlewares/rateLimit';
-import { bruteForceGuard } from '../middlewares/bruteForce';
-import { jwtAuth } from '../middlewares/auth/jwtAuth';
-import { validateRequest } from '../middlewares/validateRequest';
-import { authController } from '../controllers/authController';
+import { authRateLimit, loginRateLimit } from '../middlewares/rateLimit.js';
+import { bruteForceGuard } from '../middlewares/bruteForce.js';
+import { jwtAuth } from '../middlewares/auth/jwtAuth.js';
+import { validateRequest } from '../middlewares/validateRequest.js';
+import { authController } from '../controllers/authController.js';
 import {
   changePasswordSchema,
   forgotPasswordSchema,
   loginSchema,
   resetPasswordSchema
-} from '../validators/auth';
-import type { AppVariables } from '../types/app';
+} from '../validators/auth.js';
+import type { AppVariables } from '../types/app.js';
 
 export const authRouter = new Hono<{ Variables: AppVariables }>();
 

@@ -1,8 +1,8 @@
-export * from './audit.types';
+export * from './audit.types.js';
 export {
   auditService,
   getRequestMeta,
   writeAuditLog,
   auditFromContext
-} from './audit.service';
-export { auditRepository } from './audit.repository';
+} from './audit.service.js';
+export { auditRepository } from './audit.repository.js';

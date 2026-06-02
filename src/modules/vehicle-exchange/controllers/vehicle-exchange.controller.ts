@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
-import { fail, ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { vehicleExchangeService } from '../services/vehicle-exchange.service';
-import type { CreateVehicleExchangeDto, ExchangeReportQueryDto } from '../dto/vehicle-exchange.dto';
+import { fail, ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { vehicleExchangeService } from '../services/vehicle-exchange.service.js';
+import type { CreateVehicleExchangeDto, ExchangeReportQueryDto } from '../dto/vehicle-exchange.dto.js';
 
 type VehicleExchangeContext = Context<{ Variables: AppVariables }>;
 

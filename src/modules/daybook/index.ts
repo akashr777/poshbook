@@ -1,6 +1,6 @@
 // Import first
-import { daybookRouter } from './daybook.route';
-import { daybookEntries } from './daybook.schema';
+import { daybookRouter } from './daybook.route.js';
+import { daybookEntries } from './daybook.schema.js';
 
 // Then export
 export { daybookRouter, daybookEntries };

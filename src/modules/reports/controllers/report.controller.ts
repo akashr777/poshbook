@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
-import { ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { reportService } from '../services/report.service';
-import type { ReportQueryDto } from '../dto/report.dto';
+import { ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { reportService } from '../services/report.service.js';
+import type { ReportQueryDto } from '../dto/report.dto.js';
 
 type ReportContext = Context<{ Variables: AppVariables }>;
 

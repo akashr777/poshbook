@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
-import { ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { paymentService } from '../services/payment.service';
-import type { CreatePaymentDto } from '../dto/payment.dto';
+import { ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { paymentService } from '../services/payment.service.js';
+import type { CreatePaymentDto } from '../dto/payment.dto.js';
 
 type PaymentContext = Context<{ Variables: AppVariables }>;
 

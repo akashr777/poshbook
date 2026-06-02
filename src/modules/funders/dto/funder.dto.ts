@@ -5,7 +5,7 @@ import type {
   ledgerQuerySchema,
   listFundersQuerySchema,
   updateFunderSchema,
-} from '../validators/funder.validation';
+} from '../validators/funder.validation.js';
 
 export type CreateFunderDto = z.infer<typeof createFunderSchema>;
 export type UpdateFunderDto = z.infer<typeof updateFunderSchema>;

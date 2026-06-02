@@ -1,8 +1,8 @@
 // vehicle.repository.ts
 import { and, asc, count, desc, eq, ilike, or } from 'drizzle-orm';
-import { db } from '../../db';
-import { vehicles } from './vehicle.schema';
-import type { VehicleCreateInput, VehicleListQuery, VehicleRecord, VehicleSortBy, VehicleUpdateInput } from './vehicle.types';
+import { db } from '../../db/index.js';
+import { vehicles } from './vehicle.schema.js';
+import type { VehicleCreateInput, VehicleListQuery, VehicleRecord, VehicleSortBy, VehicleUpdateInput } from './vehicle.types.js';
 
 
 function sortField(sortBy: VehicleSortBy) {

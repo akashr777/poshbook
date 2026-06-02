@@ -1,4 +1,4 @@
-import type { NewCashLedgerRow } from './cash-ledger.schema';
+import type { NewCashLedgerRow } from './cash-ledger.schema.js';
 
 export type CashLedgerCreateInput = NewCashLedgerRow;
 

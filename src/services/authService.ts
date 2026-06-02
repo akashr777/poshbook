@@ -1,13 +1,13 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { randomUUID } from 'crypto';
 import { eq } from 'drizzle-orm';
-import { env } from '../config/env';
-import { users } from '../db/schema';
-import { db } from '../db';
-import { passwordService } from './passwordService';
-import { sessionService } from '../modules/sessions';
-import { userService } from '../modules/users';
-import type { UserRole } from '../types/app';
+import { env } from '../config/env.js';
+import { users } from '../db/schema.js';
+import { db } from '../db/index.js';
+import { passwordService } from './passwordService.js';
+import { sessionService } from '../modules/sessions/index.js';
+import { userService } from '../modules/users/index.js';
+import type { UserRole } from '../types/app.js';
 
 export type AccessTokenPayload = {
   sub: string;

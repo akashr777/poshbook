@@ -1,5 +1,5 @@
-import type { UserRow } from '../../db/schema';
-import type { UserRole, UserStatus } from '../../types/app';
+import type { UserRow } from '../../db/schema.js';
+import type { UserRole, UserStatus } from '../../types/app.js';
 
 export type PublicUser = Omit<UserRow, 'password'>;
 

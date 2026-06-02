@@ -1,10 +1,10 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateParams, validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { funderController } from '../controllers/funder.controller';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateParams, validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { funderController } from '../controllers/funder.controller.js';
 import {
   createFunderSchema,
   createFunderTransactionSchema,
@@ -12,7 +12,7 @@ import {
   ledgerQuerySchema,
   listFundersQuerySchema,
   updateFunderSchema,
-} from '../validators/funder.validation';
+} from '../validators/funder.validation.js';
 
 export const fundersRouter = new Hono<{ Variables: AppVariables }>();
 

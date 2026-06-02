@@ -1,15 +1,15 @@
 import type { Context } from 'hono';
-import { auditFromContext } from '../audit';
-import { fail, ok } from '../../utils/responses';
-import { daybookService } from './daybook.service';
-import type { AppVariables } from '../../types/app';
+import { auditFromContext } from '../audit/index.js';
+import { fail, ok } from '../../utils/responses.js';
+import { daybookService } from './daybook.service.js';
+import type { AppVariables } from '../../types/app.js';
 import type {
   CreateDaybookEntryInput,
   ListDaybookQuery,
   MonthlyReportQuery,
   ReportQuery,
   UpdateDaybookEntryInput,
-} from './daybook.types';
+} from './daybook.types.js';
 
 type DaybookContext = Context<{ Variables: AppVariables }>;
 

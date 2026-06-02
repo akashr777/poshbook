@@ -1,7 +1,7 @@
 import { createMiddleware } from 'hono/factory';
-import { env } from '../config/env';
-import { fail } from '../utils/responses';
-import { getClientKey } from '../utils/request';
+import { env } from '../config/env.js';
+import { fail } from '../utils/responses.js';
+import { getClientKey } from '../utils/request.js';
 
 type Bucket = { count: number; resetAt: number };
 

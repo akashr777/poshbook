@@ -10,23 +10,23 @@ import {
 } from 'drizzle-orm/pg-core';
 
 // Module Imports
-import { vehicles, vehicleStatusEnum } from '../modules/vehicles/vehicle.schema';
-import { daybookEntries, daybookEntryTypeEnum } from '../modules/daybook/daybook.schema';
-import { vendors, vendorStatusEnum } from '../modules/vendors/vendor.schema';
+import { vehicles, vehicleStatusEnum } from '../modules/vehicles/vehicle.schema.js';
+import { daybookEntries, daybookEntryTypeEnum } from '../modules/daybook/daybook.schema.js';
+import { vendors, vendorStatusEnum } from '../modules/vendors/vendor.schema.js';
 import {
   cashLedger,
   cashLedgerDirectionEnum,
   cashLedgerModuleEnum,
-} from '../modules/cash-ledger/cash-ledger.schema';
-import { funders, funderTransactions, funderStatusEnum, funderTransactionTypeEnum } from '../modules/funders/schemas/funder.schema';
-import { vendorPayments, vendorPurchases } from '../modules/vendor-ledger/schemas/vendor-ledger.schema';
-import { expenseCategories, expenses, expenseTypeEnum, expenseCategoryStatusEnum } from '../modules/expenses/schemas/expense.schema';
-import { salaryExpenses } from '../modules/salaries/schemas/salary.schema';
+} from '../modules/cash-ledger/cash-ledger.schema.js';
+import { funders, funderTransactions, funderStatusEnum, funderTransactionTypeEnum } from '../modules/funders/schemas/funder.schema.js';
+import { vendorPayments, vendorPurchases } from '../modules/vendor-ledger/schemas/vendor-ledger.schema.js';
+import { expenseCategories, expenses, expenseTypeEnum, expenseCategoryStatusEnum } from '../modules/expenses/schemas/expense.schema.js';
+import { salaryExpenses } from '../modules/salaries/schemas/salary.schema.js';
 import {
   vehicleSalePaymentStatusEnum,
   vehicleSales,
-} from '../modules/vehicle-accounting/schemas/vehicle-accounting.schema';
-import { vehicleExchangeHistory } from '../modules/vehicle-exchange/schemas/vehicle-exchange.schema';
+} from '../modules/vehicle-accounting/schemas/vehicle-accounting.schema.js';
+import { vehicleExchangeHistory } from '../modules/vehicle-exchange/schemas/vehicle-exchange.schema.js';
 
 /* ---------------------------------- */
 /* User Enums */

@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
-import { fail, ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { vendorLedgerService } from '../services/vendor-ledger.service';
-import type { CreateVendorPaymentDto, CreateVendorPurchaseDto, VendorLedgerQueryDto } from '../dto/vendor-ledger.dto';
+import { fail, ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { vendorLedgerService } from '../services/vendor-ledger.service.js';
+import type { CreateVendorPaymentDto, CreateVendorPurchaseDto, VendorLedgerQueryDto } from '../dto/vendor-ledger.dto.js';
 
 type VendorLedgerContext = Context<{ Variables: AppVariables }>;
 

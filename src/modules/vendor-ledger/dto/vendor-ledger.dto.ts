@@ -3,7 +3,7 @@ import type {
   createVendorPaymentSchema,
   createVendorPurchaseSchema,
   vendorLedgerQuerySchema,
-} from '../validators/vendor-ledger.validation';
+} from '../validators/vendor-ledger.validation.js';
 
 export type CreateVendorPurchaseDto = z.infer<typeof createVendorPurchaseSchema>;
 export type CreateVendorPaymentDto = z.infer<typeof createVendorPaymentSchema>;

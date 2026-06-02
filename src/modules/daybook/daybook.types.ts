@@ -5,8 +5,8 @@ import type {
   monthlyReportQuerySchema,
   reportQuerySchema,
   updateDaybookEntrySchema,
-} from './daybook.validation';
-import type { DaybookEntryRow } from './daybook.schema';
+} from './daybook.validation.js';
+import type { DaybookEntryRow } from './daybook.schema.js';
 
 export type DaybookEntryType = 'debit' | 'credit';
 

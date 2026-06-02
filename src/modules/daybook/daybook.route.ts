@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../middlewares/auth/requirePermission';
-import { validateParams, validateRequest } from '../../middlewares/validateRequest';
-import { Permission } from '../../utils/permissions';
-import { daybookController } from './daybook.controller';
+import { jwtAuth } from '../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../middlewares/auth/requirePermission.js';
+import { validateParams, validateRequest } from '../../middlewares/validateRequest.js';
+import { Permission } from '../../utils/permissions.js';
+import { daybookController } from './daybook.controller.js';
 import {
   createDaybookEntrySchema,
   daybookIdParamSchema,
@@ -12,8 +12,8 @@ import {
   monthlyReportQuerySchema,
   reportQuerySchema,
   updateDaybookEntrySchema,
-} from './daybook.validation';
-import type { AppVariables } from '../../types/app';
+} from './daybook.validation.js';
+import type { AppVariables } from '../../types/app.js';
 
 export const daybookRouter = new Hono<{ Variables: AppVariables }>();
 

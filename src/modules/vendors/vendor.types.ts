@@ -1,5 +1,5 @@
 import type { z } from 'zod';
-import type { VendorRow } from './vendor.schema';
+import type { VendorRow } from './vendor.schema.js';
 
 export type VendorStatus = 'active' | 'inactive';
 

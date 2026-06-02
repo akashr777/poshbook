@@ -1,14 +1,14 @@
 import type { Context } from 'hono';
-import { fail, ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { funderService } from '../services/funder.service';
+import { fail, ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { funderService } from '../services/funder.service.js';
 import type {
   CreateFunderDto,
   CreateFunderTransactionDto,
   LedgerQueryDto,
   ListFundersQueryDto,
   UpdateFunderDto,
-} from '../dto/funder.dto';
+} from '../dto/funder.dto.js';
 
 type FunderContext = Context<{ Variables: AppVariables }>;
 

@@ -1,4 +1,4 @@
-import { sessionRepository } from './session.repository';
+import { sessionRepository } from './session.repository.js';
 
 export const sessionService = {
   async createSession(jti: string, userId: number, expiresAt: Date): Promise<void> {

@@ -1,6 +1,6 @@
 import { and, eq, gt, isNull } from 'drizzle-orm';
-import { db } from '../../db';
-import { passwordResetTokens, users } from '../../db/schema';
+import { db } from '../../db/index.js';
+import { passwordResetTokens, users } from '../../db/schema.js';
 
 export const authRepository = {
   async deactivateOlderResetTokens(userId: number): Promise<void> {

@@ -1,5 +1,5 @@
 import type { z } from 'zod';
-import type { createSalaryExpenseSchema, salaryReportQuerySchema } from '../validators/salary.validation';
+import type { createSalaryExpenseSchema, salaryReportQuerySchema } from '../validators/salary.validation.js';
 
 export type CreateSalaryExpenseDto = z.infer<typeof createSalaryExpenseSchema>;
 export type SalaryReportQueryDto = z.infer<typeof salaryReportQuerySchema>;

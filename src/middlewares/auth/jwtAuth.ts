@@ -1,8 +1,8 @@
 import { createMiddleware } from 'hono/factory';
 import { jwtVerify } from 'jose';
-import { env } from '../../config/env';
-import { fail } from '../../utils/responses';
-import type { AppVariables, AuthUser, UserRole } from '../../types/app';
+import { env } from '../../config/env.js';
+import { fail } from '../../utils/responses.js';
+import type { AppVariables, AuthUser, UserRole } from '../../types/app.js';
 
 export const jwtAuth = createMiddleware<{ Variables: AppVariables }>(async (c, next) => {
   const auth = c.req.header('authorization');

@@ -1,7 +1,7 @@
-import { db } from '../../../db';
-import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository';
-import { expenseRepository } from '../repositories/expense.repository';
-import type { CreateExpenseCategoryDto, CreateExpenseDto, ExpenseReportQueryDto } from '../dto/expense.dto';
+import { db } from '../../../db/index.js';
+import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository.js';
+import { expenseRepository } from '../repositories/expense.repository.js';
+import type { CreateExpenseCategoryDto, CreateExpenseDto, ExpenseReportQueryDto } from '../dto/expense.dto.js';
 
 export const expenseService = {
   createCategory(input: CreateExpenseCategoryDto) {

@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
-import { fail, ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { vehicleAccountingService } from '../services/vehicle-accounting.service';
-import type { CreateVehicleSaleDto } from '../dto/vehicle-accounting.dto';
+import { fail, ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { vehicleAccountingService } from '../services/vehicle-accounting.service.js';
+import type { CreateVehicleSaleDto } from '../dto/vehicle-accounting.dto.js';
 
 type VehicleAccountingContext = Context<{ Variables: AppVariables }>;
 

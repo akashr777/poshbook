@@ -1,7 +1,7 @@
-import { db } from '../../../db';
-import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository';
-import { vendorLedgerRepository } from '../repositories/vendor-ledger.repository';
-import type { CreateVendorPaymentDto, CreateVendorPurchaseDto, VendorLedgerQueryDto } from '../dto/vendor-ledger.dto';
+import { db } from '../../../db/index.js';
+import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository.js';
+import { vendorLedgerRepository } from '../repositories/vendor-ledger.repository.js';
+import type { CreateVendorPaymentDto, CreateVendorPurchaseDto, VendorLedgerQueryDto } from '../dto/vendor-ledger.dto.js';
 
 function vendorNotFound() {
   return Object.assign(new Error('Vendor not found'), { code: 'VENDOR_NOT_FOUND' });

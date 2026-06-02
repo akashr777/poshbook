@@ -1,6 +1,6 @@
 import { index, integer, numeric, pgTable, serial, text, timestamp, varchar } from 'drizzle-orm/pg-core';
-import { vehicles } from '../../vehicles/vehicle.schema';
-import { vendors } from '../../vendors/vendor.schema';
+import { vehicles } from '../../vehicles/vehicle.schema.js';
+import { vendors } from '../../vendors/vendor.schema.js';
 
 export const vendorPurchases = pgTable(
   'vendor_purchases',

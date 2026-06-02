@@ -1,5 +1,5 @@
-import { vendorRepository } from './vendor.repository';
-import type { VendorsQueryInput, VendorCreateInput, VendorUpdateInput, VendorListResult } from './vendor.types';
+import { vendorRepository } from './vendor.repository.js';
+import type { VendorsQueryInput, VendorCreateInput, VendorUpdateInput, VendorListResult } from './vendor.types.js';
 
 export const vendorService = {
   async findById(id: number) {

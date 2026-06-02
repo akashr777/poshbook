@@ -1,13 +1,13 @@
 import type { Context } from 'hono';
-import { userService } from './user.service';
-import { fail, ok } from '../../utils/responses';
-import { auditFromContext } from '../audit';
-import type { AppVariables } from '../../types/app';
+import { userService } from './user.service.js';
+import { fail, ok } from '../../utils/responses.js';
+import { auditFromContext } from '../audit/index.js';
+import type { AppVariables } from '../../types/app.js';
 import type {
   UserCreateInput,
   UserUpdateInput,
   UsersQueryInput
-} from './user.types';
+} from './user.types.js';
 
 type UsersContext = Context<{ Variables: AppVariables }>;
 

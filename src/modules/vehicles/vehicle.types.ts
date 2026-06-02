@@ -4,7 +4,7 @@ import {
   createVehicleSchema,
   listVehiclesQuerySchema,
   updateVehicleSchema
-} from './vehicle.validation';
+} from './vehicle.validation.js';
 
 export type VehicleStatus = 'available' | 'booked' | 'sold' | 'hidden' | 'ACTIVE' | 'SOLD' | 'EXCHANGED';
 

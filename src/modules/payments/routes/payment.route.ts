@@ -1,11 +1,11 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { paymentController } from '../controllers/payment.controller';
-import { createPaymentSchema } from '../validators/payment.validation';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { paymentController } from '../controllers/payment.controller.js';
+import { createPaymentSchema } from '../validators/payment.validation.js';
 
 export const paymentsRouter = new Hono<{ Variables: AppVariables }>();
 

@@ -1,6 +1,6 @@
-import { auditFromContext } from '../audit';
-import { vehicleRepository } from './vehicle.repository';
-import type { VehicleCreateInput, VehicleListQuery, VehicleRecord, VehicleUpdateInput } from './vehicle.types';
+import { auditFromContext } from '../audit/index.js';
+import { vehicleRepository } from './vehicle.repository.js';
+import type { VehicleCreateInput, VehicleListQuery, VehicleRecord, VehicleUpdateInput } from './vehicle.types.js';
 
 export const vehicleService = {
   async createVehicle(input: VehicleCreateInput, actorId: string, context: any): Promise<VehicleRecord> {

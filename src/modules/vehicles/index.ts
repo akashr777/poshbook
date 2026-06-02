@@ -1,1 +1,1 @@
-export { vehiclesRouter } from './vehicle.route';
+export { vehiclesRouter } from './vehicle.route.js';

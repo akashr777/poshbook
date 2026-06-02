@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
-import { fail, ok } from '../../../utils/responses';
-import type { AppVariables } from '../../../types/app';
-import { salaryService } from '../services/salary.service';
-import type { CreateSalaryExpenseDto, SalaryReportQueryDto } from '../dto/salary.dto';
+import { fail, ok } from '../../../utils/responses.js';
+import type { AppVariables } from '../../../types/app.js';
+import { salaryService } from '../services/salary.service.js';
+import type { CreateSalaryExpenseDto, SalaryReportQueryDto } from '../dto/salary.dto.js';
 
 type SalaryContext = Context<{ Variables: AppVariables }>;
 

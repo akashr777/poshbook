@@ -1,7 +1,7 @@
 import { createMiddleware } from 'hono/factory';
-import { fail } from '../../utils/responses';
-import { roleHasPermission, type Permission } from '../../utils/permissions';
-import type { AppVariables } from '../../types/app';
+import { fail } from '../../utils/responses.js';
+import { roleHasPermission, type Permission } from '../../utils/permissions.js';
+import type { AppVariables } from '../../types/app.js';
 
 export function requirePermission(permission: Permission) {
   return createMiddleware<{ Variables: AppVariables }>(async (c, next) => {

@@ -1,7 +1,7 @@
-import { db } from '../../../db';
-import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository';
-import { salaryRepository } from '../repositories/salary.repository';
-import type { CreateSalaryExpenseDto, SalaryReportQueryDto } from '../dto/salary.dto';
+import { db } from '../../../db/index.js';
+import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository.js';
+import { salaryRepository } from '../repositories/salary.repository.js';
+import type { CreateSalaryExpenseDto, SalaryReportQueryDto } from '../dto/salary.dto.js';
 
 export const salaryService = {
   async create(input: CreateSalaryExpenseDto, createdBy: number) {

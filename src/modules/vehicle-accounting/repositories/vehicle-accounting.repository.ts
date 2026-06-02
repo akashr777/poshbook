@@ -1,8 +1,8 @@
 import { desc, eq, sql } from 'drizzle-orm';
-import { db } from '../../../db';
-import { vehicles } from '../../vehicles/vehicle.schema';
-import { vehicleSales } from '../schemas/vehicle-accounting.schema';
-import type { CreateVehicleSaleDto } from '../dto/vehicle-accounting.dto';
+import { db } from '../../../db/index.js';
+import { vehicles } from '../../vehicles/vehicle.schema.js';
+import { vehicleSales } from '../schemas/vehicle-accounting.schema.js';
+import type { CreateVehicleSaleDto } from '../dto/vehicle-accounting.dto.js';
 
 type DbClient = typeof db;
 

@@ -1,16 +1,16 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateParams, validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { vendorLedgerController } from '../controllers/vendor-ledger.controller';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateParams, validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { vendorLedgerController } from '../controllers/vendor-ledger.controller.js';
 import {
   createVendorPaymentSchema,
   createVendorPurchaseSchema,
   vendorLedgerQuerySchema,
   vendorLedgerVendorParamSchema,
-} from '../validators/vendor-ledger.validation';
+} from '../validators/vendor-ledger.validation.js';
 
 export const vendorLedgerRouter = new Hono<{ Variables: AppVariables }>();
 

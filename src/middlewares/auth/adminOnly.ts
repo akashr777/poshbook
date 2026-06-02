@@ -1,6 +1,6 @@
 import { createMiddleware } from 'hono/factory';
-import { fail } from '../../utils/responses';
-import type { AppVariables } from '../../types/app';
+import { fail } from '../../utils/responses.js';
+import type { AppVariables } from '../../types/app.js';
 
 export const adminOnly = createMiddleware<{ Variables: AppVariables }>(async (c, next) => {
   const user = c.get('user');

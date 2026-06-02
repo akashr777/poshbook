@@ -1,7 +1,7 @@
 import type { Context } from 'hono';
-import { vehicleService } from './vehicle.service';
-import type { VehicleListQuery, VehicleCreateInput, VehicleUpdateInput } from './vehicle.types';
-import type { AppVariables } from '../../types/app';
+import { vehicleService } from './vehicle.service.js';
+import type { VehicleListQuery, VehicleCreateInput, VehicleUpdateInput } from './vehicle.types.js';
+import type { AppVariables } from '../../types/app.js';
 
 type VehicleContext = Context<{ Variables: AppVariables }>;
 

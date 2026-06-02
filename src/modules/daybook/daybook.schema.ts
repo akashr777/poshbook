@@ -10,7 +10,7 @@ import {
   varchar,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
-import { vehicles } from '../vehicles/vehicle.schema';
+import { vehicles } from '../vehicles/vehicle.schema.js';
 
 export const daybookEntryTypeEnum = pgEnum('daybook_entry_type', ['debit', 'credit']);
 

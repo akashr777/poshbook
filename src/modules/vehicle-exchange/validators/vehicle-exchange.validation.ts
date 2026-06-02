@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createVehicleSchema } from '../../vehicles/vehicle.validation';
+import { createVehicleSchema } from '../../vehicles/vehicle.validation.js';
 
 export const createVehicleExchangeSchema = z.object({
   oldVehicleId: z.coerce.number().int().positive(),

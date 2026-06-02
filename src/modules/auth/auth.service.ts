@@ -1,13 +1,13 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { randomUUID, createHash, randomBytes } from 'crypto';
 import bcrypt from 'bcryptjs';
-import { env } from '../../config/env';
-import { authRepository } from './auth.repository';
-import { sessionService } from '../sessions';
-import { userRepository } from '../users';
-import { emailService } from '../../services/emailService';
-import type { UserRole } from '../../types/app';
-import type { AccessTokenPayload, RefreshTokenPayload } from './auth.types';
+import { env } from '../../config/env.js';
+import { authRepository } from './auth.repository.js';
+import { sessionService } from '../sessions/index.js';
+import { userRepository } from '../users/index.js';
+import { emailService } from '../../services/emailService.js';
+import type { UserRole } from '../../types/app.js';
+import type { AccessTokenPayload, RefreshTokenPayload } from './auth.types.js';
 
 function accessSecret() {
   return new TextEncoder().encode(env.JWT_ACCESS_SECRET);

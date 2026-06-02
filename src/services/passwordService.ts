@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 function randomString(bytes: Uint8Array) {
   const b64 = Buffer.from(bytes).toString('base64');

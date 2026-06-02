@@ -1,18 +1,18 @@
 import { Hono } from 'hono';
 
-import { jwtAuth } from '../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../middlewares/auth/requirePermission';
-import { validateParams, validateRequest } from '../../middlewares/validateRequest';
-import { Permission } from '../../utils/permissions';
+import { jwtAuth } from '../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../middlewares/auth/requirePermission.js';
+import { validateParams, validateRequest } from '../../middlewares/validateRequest.js';
+import { Permission } from '../../utils/permissions.js';
 
-import type { AppVariables } from '../../types/app';
-import { vendorController } from './vendor.controller';
+import type { AppVariables } from '../../types/app.js';
+import { vendorController } from './vendor.controller.js';
 import {
   createVendorSchema,
   listVendorsQuerySchema,
   updateVendorSchema,
   vendorIdParamSchema,
-} from './vendor.validation';
+} from './vendor.validation.js';
 
 export const vendorsRouter = new Hono<{ Variables: AppVariables }>();
 

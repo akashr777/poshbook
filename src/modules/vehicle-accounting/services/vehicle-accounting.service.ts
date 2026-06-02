@@ -1,7 +1,7 @@
-import { db } from '../../../db';
-import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository';
-import { vehicleAccountingRepository } from '../repositories/vehicle-accounting.repository';
-import type { CreateVehicleSaleDto } from '../dto/vehicle-accounting.dto';
+import { db } from '../../../db/index.js';
+import { cashLedgerRepository } from '../../cash-ledger/cash-ledger.repository.js';
+import { vehicleAccountingRepository } from '../repositories/vehicle-accounting.repository.js';
+import type { CreateVehicleSaleDto } from '../dto/vehicle-accounting.dto.js';
 
 export const vehicleAccountingService = {
   async createSale(vehicleId: number, input: CreateVehicleSaleDto, createdBy: number) {

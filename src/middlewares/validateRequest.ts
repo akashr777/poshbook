@@ -1,5 +1,5 @@
 import { z, ZodSchema } from 'zod';
-import { sanitizeObject } from '../utils/sanitize';
+import { sanitizeObject } from '../utils/sanitize.js';
 
 type Source = 'json' | 'query' | 'form';
 

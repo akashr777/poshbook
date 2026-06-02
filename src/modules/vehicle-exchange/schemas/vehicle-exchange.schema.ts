@@ -1,5 +1,5 @@
 import { index, integer, numeric, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
-import { vehicles } from '../../vehicles/vehicle.schema';
+import { vehicles } from '../../vehicles/vehicle.schema.js';
 
 export const vehicleExchangeHistory = pgTable(
   'vehicle_exchange_history',

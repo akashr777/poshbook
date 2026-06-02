@@ -1,13 +1,13 @@
 import { and, asc, count, desc, eq, gte, ilike, lte, or, sql } from 'drizzle-orm';
-import { db } from '../../../db';
-import { funderTransactions, funders } from '../schemas/funder.schema';
+import { db } from '../../../db/index.js';
+import { funderTransactions, funders } from '../schemas/funder.schema.js';
 import type {
   CreateFunderDto,
   CreateFunderTransactionDto,
   LedgerQueryDto,
   ListFundersQueryDto,
   UpdateFunderDto,
-} from '../dto/funder.dto';
+} from '../dto/funder.dto.js';
 
 type DbClient = typeof db;
 

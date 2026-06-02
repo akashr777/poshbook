@@ -1,12 +1,12 @@
-import { db } from '../../db';
-import { daybookRepository } from './daybook.repository';
+import { db } from '../../db/index.js';
+import { daybookRepository } from './daybook.repository.js';
 import type {
   CreateDaybookEntryInput,
   ListDaybookQuery,
   MonthlyReportQuery,
   ReportQuery,
   UpdateDaybookEntryInput,
-} from './daybook.types';
+} from './daybook.types.js';
 
 function normalizeAmounts<T extends { entryType: 'debit' | 'credit'; debitAmount?: number; creditAmount?: number }>(
   input: T

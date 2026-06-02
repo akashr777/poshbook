@@ -1,3 +1,3 @@
-export * from './session.types';
-export { sessionService } from './session.service';
-export { sessionRepository } from './session.repository';
+export * from './session.types.js';
+export { sessionService } from './session.service.js';
+export { sessionRepository } from './session.repository.js';

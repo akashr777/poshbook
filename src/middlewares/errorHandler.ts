@@ -1,7 +1,7 @@
 import { HTTPException } from 'hono/http-exception';
 import { ZodError } from 'zod';
 import { errors as joseErrors } from 'jose';
-import { logger } from '../utils/logger';
+import { logger } from '../utils/logger.js';
 
 export function errorHandler(err: unknown, c: { json: (body: unknown, status: number) => Response }) {
   if (err instanceof ZodError) {

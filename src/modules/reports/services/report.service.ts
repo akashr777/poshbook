@@ -1,11 +1,11 @@
-import { cashLedgerService } from '../../cash-ledger';
-import { expenseService } from '../../expenses';
-import { funderService } from '../../funders';
-import { salaryService } from '../../salaries';
-import { vehicleAccountingService } from '../../vehicle-accounting';
-import { vehicleExchangeService } from '../../vehicle-exchange';
-import { vendorLedgerService } from '../../vendor-ledger';
-import type { ReportQueryDto } from '../dto/report.dto';
+import { cashLedgerService } from '../../cash-ledger/index.js';
+import { expenseService } from '../../expenses/index.js';
+import { funderService } from '../../funders/index.js';
+import { salaryService } from '../../salaries/index.js';
+import { vehicleAccountingService } from '../../vehicle-accounting/index.js';
+import { vehicleExchangeService } from '../../vehicle-exchange/index.js';
+import { vendorLedgerService } from '../../vendor-ledger/index.js';
+import type { ReportQueryDto } from '../dto/report.dto.js';
 
 export const reportService = {
   funders() {

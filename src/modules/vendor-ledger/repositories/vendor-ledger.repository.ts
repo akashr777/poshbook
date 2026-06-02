@@ -1,8 +1,8 @@
 import { and, asc, eq, gte, lte, sql } from 'drizzle-orm';
-import { db } from '../../../db';
-import { vendors } from '../../vendors/vendor.schema';
-import { vendorPayments, vendorPurchases } from '../schemas/vendor-ledger.schema';
-import type { CreateVendorPaymentDto, CreateVendorPurchaseDto, VendorLedgerQueryDto } from '../dto/vendor-ledger.dto';
+import { db } from '../../../db/index.js';
+import { vendors } from '../../vendors/vendor.schema.js';
+import { vendorPayments, vendorPurchases } from '../schemas/vendor-ledger.schema.js';
+import type { CreateVendorPaymentDto, CreateVendorPurchaseDto, VendorLedgerQueryDto } from '../dto/vendor-ledger.dto.js';
 
 type DbClient = typeof db;
 

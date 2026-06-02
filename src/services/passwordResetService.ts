@@ -1,11 +1,11 @@
 import { createHash, randomBytes } from 'crypto';
 import { and, eq, isNull, gt } from 'drizzle-orm';
-import { db } from '../db';
-import { passwordResetTokens, users } from '../db/schema';
-import { env } from '../config/env';
-import { passwordService } from './passwordService';
-import { emailService } from './emailService';
-import { sessionService } from '../modules/sessions';
+import { db } from '../db/index.js';
+import { passwordResetTokens, users } from '../db/schema.js';
+import { env } from '../config/env.js';
+import { passwordService } from './passwordService.js';
+import { emailService } from './emailService.js';
+import { sessionService } from '../modules/sessions/index.js';
 
 function hashToken(token: string) {
   return createHash('sha256').update(token).digest('hex');

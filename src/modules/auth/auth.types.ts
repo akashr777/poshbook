@@ -1,4 +1,4 @@
-import type { UserRole } from '../../types/app';
+import type { UserRole } from '../../types/app.js';
 
 export type AccessTokenPayload = {
   sub: string;

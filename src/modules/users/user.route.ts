@@ -1,18 +1,18 @@
 import { Hono } from 'hono';
 
-import { rateLimit } from '../../middlewares/rateLimit';
-import { jwtAuth } from '../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../middlewares/auth/requirePermission';
-import { Permission } from '../../utils/permissions';
-import { userController } from './user.controller';
-import { validateParams, validateRequest } from '../../middlewares/validateRequest';
+import { rateLimit } from '../../middlewares/rateLimit.js';
+import { jwtAuth } from '../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../middlewares/auth/requirePermission.js';
+import { Permission } from '../../utils/permissions.js';
+import { userController } from './user.controller.js';
+import { validateParams, validateRequest } from '../../middlewares/validateRequest.js';
 import {
   createUserSchema,
   updateUserSchema,
   userIdParamSchema,
   usersQuerySchema
-} from './user.schema';
-import type { AppVariables } from '../../types/app';
+} from './user.schema.js';
+import type { AppVariables } from '../../types/app.js';
 
 export const usersRouter = new Hono<{ Variables: AppVariables }>();
 

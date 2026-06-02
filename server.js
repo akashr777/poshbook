@@ -1,6 +1,6 @@
-const { serve } = require('@hono/node-server');
-const { app } = require('./dist/app.js');
-require('dotenv/config');
+import { serve } from '@hono/node-server';
+import { app } from './dist/app.js';
+import 'dotenv/config';
 
 const port = process.env.PORT || 3000;
 

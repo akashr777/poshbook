@@ -1,10 +1,10 @@
 import { and, desc, eq, gte, lte } from 'drizzle-orm';
-import { db } from '../../../db';
-import { auditLogs } from '../../../db/schema';
-import { cashLedger } from '../../cash-ledger/cash-ledger.schema';
-import { vehicles } from '../../vehicles/vehicle.schema';
-import { vehicleExchangeHistory } from '../schemas/vehicle-exchange.schema';
-import type { CreateVehicleExchangeDto, ExchangeReportQueryDto } from '../dto/vehicle-exchange.dto';
+import { db } from '../../../db/index.js';
+import { auditLogs } from '../../../db/schema.js';
+import { cashLedger } from '../../cash-ledger/cash-ledger.schema.js';
+import { vehicles } from '../../vehicles/vehicle.schema.js';
+import { vehicleExchangeHistory } from '../schemas/vehicle-exchange.schema.js';
+import type { CreateVehicleExchangeDto, ExchangeReportQueryDto } from '../dto/vehicle-exchange.dto.js';
 
 type DbClient = typeof db;
 

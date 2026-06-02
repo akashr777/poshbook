@@ -1,11 +1,11 @@
 import { Hono } from 'hono';
-import { jwtAuth } from '../../../middlewares/auth/jwtAuth';
-import { requirePermission } from '../../../middlewares/auth/requirePermission';
-import { validateRequest } from '../../../middlewares/validateRequest';
-import { Permission } from '../../../utils/permissions';
-import type { AppVariables } from '../../../types/app';
-import { salaryController } from '../controllers/salary.controller';
-import { createSalaryExpenseSchema, salaryReportQuerySchema } from '../validators/salary.validation';
+import { jwtAuth } from '../../../middlewares/auth/jwtAuth.js';
+import { requirePermission } from '../../../middlewares/auth/requirePermission.js';
+import { validateRequest } from '../../../middlewares/validateRequest.js';
+import { Permission } from '../../../utils/permissions.js';
+import type { AppVariables } from '../../../types/app.js';
+import { salaryController } from '../controllers/salary.controller.js';
+import { createSalaryExpenseSchema, salaryReportQuerySchema } from '../validators/salary.validation.js';
 
 export const salariesRouter = new Hono<{ Variables: AppVariables }>();
 

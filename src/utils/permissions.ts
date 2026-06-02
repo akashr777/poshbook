@@ -1,4 +1,4 @@
-import type { UserRole } from '../types/app';
+import type { UserRole } from '../types/app.js';
 
 export const Permission = {
   USERS_LIST: 'users.list',

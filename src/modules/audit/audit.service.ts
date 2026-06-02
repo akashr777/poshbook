@@ -1,6 +1,6 @@
 import type { Context } from 'hono';
-import { auditRepository } from './audit.repository';
-import type { AuditInput } from './audit.types';
+import { auditRepository } from './audit.repository.js';
+import type { AuditInput } from './audit.types.js';
 
 export function getRequestMeta(c: Context) {
   return {

@@ -1,6 +1,6 @@
-import { db } from '../../../db';
-import { vehicleExchangeRepository } from '../repositories/vehicle-exchange.repository';
-import type { CreateVehicleExchangeDto, ExchangeReportQueryDto } from '../dto/vehicle-exchange.dto';
+import { db } from '../../../db/index.js';
+import { vehicleExchangeRepository } from '../repositories/vehicle-exchange.repository.js';
+import type { CreateVehicleExchangeDto, ExchangeReportQueryDto } from '../dto/vehicle-exchange.dto.js';
 
 export const vehicleExchangeService = {
   async exchange(input: CreateVehicleExchangeDto, createdBy: number) {

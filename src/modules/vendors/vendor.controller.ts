@@ -1,9 +1,9 @@
 import type { Context } from 'hono';
-import { fail, ok } from '../../utils/responses';
-import { auditFromContext } from '../audit';
-import type { AppVariables } from '../../types/app';
-import type { VendorCreateInput, VendorListResult, VendorUpdateInput, VendorsQueryInput } from './vendor.types';
-import { vendorService } from './vendor.service';
+import { fail, ok } from '../../utils/responses.js';
+import { auditFromContext } from '../audit/index.js';
+import type { AppVariables } from '../../types/app.js';
+import type { VendorCreateInput, VendorListResult, VendorUpdateInput, VendorsQueryInput } from './vendor.types.js';
+import { vendorService } from './vendor.service.js';
 
 type VendorsContext = Context<{ Variables: AppVariables }>;
 

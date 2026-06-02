@@ -1,5 +1,5 @@
 import { index, integer, numeric, pgEnum, pgTable, serial, text, timestamp, varchar } from 'drizzle-orm/pg-core';
-import { vehicles } from '../../vehicles/vehicle.schema';
+import { vehicles } from '../../vehicles/vehicle.schema.js';
 
 export const expenseTypeEnum = pgEnum('expense_type', ['GENERAL', 'SALARY', 'VEHICLE']);
 export const expenseCategoryStatusEnum = pgEnum('expense_category_status', ['active', 'inactive']);
