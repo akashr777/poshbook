@@ -22,10 +22,26 @@ app.post('/api/auth/login', async (c) => {
     const { email, password } = await c.req.json();
     
     if (email === 'admin@gmail.com' && password === 'Admin123!') {
+      // Create a token
+      const token = Buffer.from(JSON.stringify({ 
+        email, 
+        userId: 1, 
+        exp: Date.now() + 86400000 
+      })).toString('base64');
+      
       return c.json({
         success: true,
         message: 'Login successful',
-        user: { email, name: 'Admin User' }
+        user: { 
+          id: 1,
+          email: email, 
+          name: 'Admin User',
+          role: 'admin'
+        },
+        token: token,
+        data: {
+          accessToken: token
+        }
       });
     }
     
@@ -48,7 +64,6 @@ app.onError((err, c) => {
   return c.json({ error: 'Internal server error' }, 500);
 });
 
-// Start the server
 const port = process.env.PORT || 3000;
 
 serve({
