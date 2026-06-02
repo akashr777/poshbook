@@ -44,3 +44,26 @@ logs/
 *.tmp
 *.temp
 *.bak
+
+
+# Bun specific
+src/server.ts
+bun.lock
+
+# Database seeds (optional - remove if you want to keep)
+scripts/seed.ts
+
+# Documentation (optional - remove if you want to keep)
+docs/
+
+# Backup files
+*.bak
+*.ts.bak
+
+# Firebase
+.firebase/
+*.firebaser*
+
+# Logs
+firebase-debug.log
+firebase-debug.*.log
