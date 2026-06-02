@@ -1,17 +1,17 @@
 import { serve } from '@hono/node-server';
-import { app } from './src/app.js';  // Your real Hono app with all routes
-import { env } from './src/config/env.js';
+import { app } from './dist/app.js';  // Changed from './src/app.js' to './dist/app.js'
+import 'dotenv/config';
 
-const port = env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 console.log(`🚀 Server starting on port ${port}`);
-console.log(`📊 Environment: ${env.NODE_ENV}`);
+console.log(`📊 Environment: ${process.env.NODE_ENV || 'production'}`);
 
 serve({
   fetch: app.fetch,
   port
 }, (info) => {
   console.log(`✅ Server running at http://localhost:${info.port}`);
-  console.log(`🔐 Auth endpoint: http://localhost:${info.port}/api/auth/login`);
-  console.log(`🚗 Vehicles: http://localhost:${info.port}/api/vehicles`);
+  console.log(`🔐 Auth endpoint: /api/auth/login`);
+  console.log(`🚗 API endpoints: /api/vehicles, /api/users, /api/daybook`);
 });

@@ -3,11 +3,7 @@ services:
     name: poshbook
     runtime: node
     buildCommand: npm install && npm run build
-    startCommand: node dist/server.js
+    startCommand: node server.js
     envVars:
       - key: NODE_VERSION
         value: 20
-      - key: DATABASE_URL
-        value: your_neon_db_connection_string_here
-      - key: JWT_SECRET
-        value: your_jwt_secret_here
